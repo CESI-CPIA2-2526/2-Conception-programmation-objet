@@ -15,13 +15,13 @@ Le projet reste volontairement simple, adapté à des débutants. La priorité e
 
 Les éléments minimum à produire sont :
 
-* Une classe `Tache` contenant un nom, une description, une priorité et un état (terminée ou non).
-* Une classe `Projet` contenant un nom et une liste de tâches (un `std::vector<Tache>`).
-* Des méthodes permettant d’ajouter une tâche, d’afficher les tâches et d’en marquer une comme terminée.
-* Un programme principal (`main.cpp`) avec un menu texte simple.
-* Une séparation propre en plusieurs fichiers `.hpp` (dans `includes/`) et `.cpp` (dans `src/`).
-* L’utilisation de GitHub Issues pour suivre votre avancement.
-* (Optionnel) Une dockerisation du projet.
+- Une classe `Tache` contenant un nom, une description, une priorité et un état (terminée ou non).
+- Une classe `Projet` contenant un nom et une liste de tâches (un `std::vector<Tache>`).
+- Des méthodes permettant d’ajouter une tâche, d’afficher les tâches et d’en marquer une comme terminée.
+- Un programme principal (`main.cpp`) avec un menu texte simple.
+- Une séparation propre en plusieurs fichiers `.hpp` (dans `includes/`) et `.cpp` (dans `src/`).
+- L’utilisation de GitHub Issues pour suivre votre avancement.
+- (Optionnel) Une dockerisation du projet.
 
 ---
 
@@ -40,29 +40,29 @@ Les classes doivent être déclarées dans le dossier `include/` et implémenté
 
 Attributs recommandés :
 
-* `std::string nom`
-* `std::string description`
-* une priorité (entier simple ou petit enum)
-* un booléen indiquant si la tâche est terminée
+- `std::string nom`
+- `std::string description`
+- une priorité (entier simple ou petit enum)
+- un booléen indiquant si la tâche est terminée
 
 Méthodes à prévoir :
 
-* un constructeur
-* une méthode pour terminer la tâche
-* une méthode d’affichage (ex : `afficher()`)
+- un constructeur
+- une méthode pour terminer la tâche
+- une méthode d’affichage (ex : `afficher()`)
 
 ### Classe `Projet`
 
 Attributs recommandés :
 
-* `std::string nom`
-* `std::vector<Tache> taches`
+- `std::string nom`
+- `std::vector<Tache> taches`
 
 Méthodes à prévoir :
 
-* ajout d’une tâche
-* affichage de toutes les tâches
-* marquage d’une tâche comme terminée
+- ajout d’une tâche
+- affichage de toutes les tâches
+- marquage d’une tâche comme terminée
 
 ---
 
@@ -82,12 +82,12 @@ Les entrées utilisateurs se feront avec `std::cin` et `std::cout`.
 
 ## Partie 4 – Bonnes pratiques
 
-* Placer les .hpp dans `includes/` et les .cpp dans `src/`.
-* Utiliser des noms clairs et cohérents.
-* Commenter brièvement les classes.
-* Compiler avec des options signalant les avertissements (`-Wall -Wextra`).
-* Ne pas utiliser `new` ou `delete` (stockage direct dans les conteneurs).
-* Garder un code simple, lisible, sans complexité inutile.
+- Placer les .hpp dans `includes/` et les .cpp dans `src/`.
+- Utiliser des noms clairs et cohérents.
+- Commenter brièvement les classes.
+- Compiler avec des options signalant les avertissements (`-Wall -Wextra`).
+- Ne pas utiliser `new` ou `delete` (stockage direct dans les conteneurs).
+- Garder un code simple, lisible, sans complexité inutile.
 
 ---
 
@@ -99,26 +99,26 @@ Vous devez organiser votre projet avec GitHub Issues, comme dans un vrai petit p
 
 La liste suivante est **non exhaustive**. Vous devez la compléter au cours du projet en créant d'autres issues à mesure que vous avancez.
 
-* Issue : Créer la classe `Tache`
-* Issue : Créer la classe `Projet`
-* Issue : Ajouter un menu dans `main.cpp`
-* Issue : Ajouter l’option “Ajouter une tâche”
-* Issue : Ajouter l’option “Afficher les tâches”
-* Issue : Ajouter l’option “Terminer une tâche”
-* Issue : Ajouter des commentaires et nettoyer le code
-* Issue : Finaliser le binaire
-* Issue : Mise en place du README
-* Issue (optionnelle) : Dockerisation
+- Issue : Créer la classe `Tache`
+- Issue : Créer la classe `Projet`
+- Issue : Ajouter un menu dans `main.cpp`
+- Issue : Ajouter l’option “Ajouter une tâche”
+- Issue : Ajouter l’option “Afficher les tâches”
+- Issue : Ajouter l’option “Terminer une tâche”
+- Issue : Ajouter des commentaires et nettoyer le code
+- Issue : Finaliser le binaire
+- Issue : Mise en place du README
+- Issue (optionnelle) : Dockerisation
 
 ### Ce qui est attendu dans les GitHub Issues
 
 Chaque issue doit contenir :
 
-* un titre clair (ex : “Ajouter la classe Tache”),
-* une description courte expliquant ce qui doit être fait,
-* une checklist si nécessaire (ex : “Déclarer les attributs”, “Écrire le constructeur”…),
-* un statut (ouverte / fermée),
-* des issues supplémentaires créées dès qu’un besoin apparaît.
+- un titre clair (ex : “Ajouter la classe Tache”),
+- une description courte expliquant ce qui doit être fait,
+- une checklist si nécessaire (ex : “Déclarer les attributs”, “Écrire le constructeur”…),
+- un statut (ouverte / fermée),
+- des issues supplémentaires créées dès qu’un besoin apparaît.
 
 L’issue doit représenter une petite tâche réalisable facilement, afin de structurer votre travail.
 
@@ -162,6 +162,6 @@ mini-projet-cpp/
 │   ├── Projet.cpp
 │
 ├── Dockerfile          (optionnel)
-├── README.md           
+├── README.md
 └── .gitignore
 ```

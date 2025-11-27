@@ -1,0 +1,66 @@
+---
+# ==============================================================================
+#  RÈGLES DE NOMMAGE ET DOCUMENTATION (CONTRAT MORAL)
+# ==============================================================================
+# L'outil appliquera la mise en forme, mais VOUS devez respecter ces conventions :
+#
+# 1. NOMMAGE :
+#    - Classes / Structs : PascalCase (Ex: "GameEngine", "Cell")
+#    - Variables / Fonctions : camelCase (Ex: "computeNextState()", "playerScore")
+#    - Membres privés : préfixe m_ (Ex: "m_grid", "m_width").
+#      -> Indispensable pour distinguer les attributs des variables locales.
+#
+# 2. DOCUMENTATION (DOXYGEN) :
+#    - Obligatoire pour toutes les classes et méthodes publiques.
+#    - Format : Utilisez "///" pour les commentaires d'une ligne.
+#    - Exemple :
+#      /// Calcule la prochaine génération.
+#      /// @param grid La grille actuelle.
+#      /// @return La nouvelle grille.
+#      Grid evolve(const Grid& grid);
+#
+# ==============================================================================
+
+# --- CONFIGURATION AUTOMATIQUE (STYLE LLVM) ---
+BasedOnStyle: LLVM
+Language: Cpp
+Standard: c++20
+
+# --- INDENTATION ---
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 100
+
+# --- ACCOLADES & BLOCS ---
+# Fonctions : accolade à la ligne (clarté).
+# If/For/While : accolade collée (gain de place).
+BreakBeforeBraces: Linux
+
+# --- ASSOUPLISSEMENT ---
+# Autorise les getters simples sur une ligne (Ex: int getX() { return m_x; })
+AllowShortFunctionsOnASingleLine: Inline
+# Interdit les if sans accolades ou sur une ligne (pour le debugging)
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortBlocksOnASingleLine: Never
+
+# --- POINTEURS ---
+# Le type est "Pointeur d'entier" -> int* ptr
+PointerAlignment: Left
+
+# --- ORGANISATION ---
+# Tri alphabétique des includes
+SortIncludes: CaseInsensitive
+
+# Alignement vertical des commentaires de fin de ligne
+AlignTrailingComments: true
+
+# Ajoute automatiquement les commentaires de fin de namespace
+# Ex: transformera "}" en "} // namespace Core"
+FixNamespaceComments: true
+
+# --- ESTHÉTIQUE ---
+# Espaces autour des opérateurs (a = b + c)
+SpaceBeforeAssignmentOperators: true
+# Alignement vertical des arguments de fonction
+AlignAfterOpenBracket: Align
