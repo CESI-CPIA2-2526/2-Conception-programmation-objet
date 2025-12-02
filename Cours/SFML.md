@@ -174,7 +174,3 @@ int main()
     return 0;
 }
 ```
-
-### Prochaine étape ?
-
-Voulez-vous que je vous montre comment remplacer le cercle par une image réelle (**Sprites et Textures**) ou comment gérer le clavier pour contrôler le personnage vous-même ?
